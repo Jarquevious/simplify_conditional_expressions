@@ -1,21 +1,26 @@
-# By Kami Bigdely
-# Decompose conditional
-# Reference: https://www.healthline.com/health/high-cholesterol/levels-by-age
+total_cholostrol = 240
+ldl = 170
+triglyceride = 220
 
-# Blood test analysis program
-total_cholostrol = 70
-ldl = 30
-triglyceride = 120
+def is_good_cholostrol():
+    return (total_cholostrol < 200 and ldl < 100 and triglyceride < 150)
+    
+def is_high_cholostrosl():
+    return (200 < total_cholostrol > 240 or ldl > 160 or triglyceride >= 200)
 
-if total_cholostrol < 200 and ldl < 100 and triglyceride < 150:
+def is_moderate_cholostrol():
+    return (200 <total_cholostrol < 240 or 130 < ldl < 160 or 150 <= triglyceride < 200)
+
+if is_good_cholostrol():
     # good level
     print('*** Good level of cholestrol ***')
-elif 200 < total_cholostrol > 240 or ldl > 160 or triglyceride >= 200:
-    # High cholestrol level
+
+elif is_high_cholostrosl():
     print('*** High cholestrol level ***')
     print('start taking pills such as statins')
     print('start TLC diet')
-elif 200 <total_cholostrol < 240 or 130 < ldl < 160 or 150 <= triglyceride < 200:
+    
+elif is_moderate_cholostrol():
     #TLC_diet
     print('*** Borderline to moderately elevated ***')
     print("Start TLC diet")

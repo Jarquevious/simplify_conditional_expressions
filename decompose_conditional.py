@@ -11,7 +11,8 @@ def found_toxin():
     return ('sodium nitrate' in ingredients or 'sodium benzoate' in ingredients\
             or 'sodium oxide' in ingredients)
 
-ingredients = ['sodium benzoate']
+# ingredients = ['']
+ingredients = ['sodium nitrate']
 if found_toxin():
     print('!!!')
     print('there is a toxin in the food!')    
