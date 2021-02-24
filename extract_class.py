@@ -34,27 +34,31 @@ class Cook_Book():
 
     def find_dish(self):
         for key, value in self.foods.items():
-            print("Name:",key)
+            print("Name:",key, value[0])
 
     def get_prep_time(self):
         for key, value in self.foods.items():
             print("Prep time:",value[0], "mins")
 
     def check_if_veggie(self):
-        print("Is Veggie?", 'Yes' if value[1] else "No")
+        for key, value in self.foods.items():
+            print("Is Veggie?", 'Yes' if value[1] else "No")
     
     def get_food_type(self):
-        print("Food Type:", value[2])
+        for key, value in self.foods.items():
+            print("Food Type:", value[2])
 
-    def get_cuisine(self):    
-        print("Cuisine:", value[3])
-        for item in value[4]:
-            print(item, end=', ')
+    def get_cuisine(self):
+        for key, value in self.foods.items():    
+            print("Cuisine:", value[3])
+            # for item in value[4]:
+            #  print(item, end=', ')
 
     def get_recipe(self):
-        print()
-        print("recipe", value[5])
-        print("***")
+        for key, value in self.foods.items():
+            print()
+            print("recipe", value[5])
+            print("***")
         
     def show_cuisine(self):
         find_dish()
@@ -67,4 +71,4 @@ class Cook_Book():
 
 
 l = Cook_Book('shirazi salad')
-l.get_prep_time()
+l.get_recipe()
