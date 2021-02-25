@@ -1,12 +1,16 @@
 # by Kami Bigdely
 # Extract superclass.
+class Shapes():
+    def _init_(self, visible = True):
+        self.visible = visible
+
+
 class Circle:
     
-    def __init__(self, x, y, r, visible = True):
+    def __init__(self, x, y, r, ):
       self.center_x = x
       self.center_y = y
       self.r = r
-      self.visible = visible
       
     def display(self):
         print('drew the circle.')
@@ -20,17 +24,15 @@ class Circle:
     
 class Rectangle:
     
-    def __init__(self, x, y, width, height, visible = True):
+    def __init__(self, x, y, width, height):
         # left-bottom corner.
         self.x = x
         self.y = y
         self.width = width
         self.height = height
-        self.visible = visible
         
-    def display(self):
-        if self.visible:
-            print('drew the rectable.')
+        
+    
             
     def hide(self):
         self.visible = False
