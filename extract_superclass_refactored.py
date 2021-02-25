@@ -1,28 +1,25 @@
 # By Kamran Bigdely
 # Extract superclass
 # Refactored.
-class Enemy:
+class AngryMushroom:
     
     def __init__(self):
-        self.health = 100   
-         
+        self.health = 100
+        
     def take_damage(self, damage):
         self.health -= damage
-
-
-class AngryMushroom(Enemy):
-    
-    def __init__(self):
-        pass
-    
+        
     def spread_poison(self):
         print('spreading poison!')
 
 
-class AngryBot(Enemy):
-    
+class AngryBot:
     def __init__(self):
+        self.health = 100
         self.n_bullets = 40
+        
+    def take_damage(self, damage):
+        self.health -= damage
         
     def punch_iron_fist(self):
         print("punching with iron fist!")
@@ -30,7 +27,6 @@ class AngryBot(Enemy):
     def shoot(self):
         print("shot a bullet!")
         self.n_bullets -= 1
-
 
 
 class AgressiveAlligator(Enemy):
